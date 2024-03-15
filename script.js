@@ -2,12 +2,12 @@ import {
   handlePropsGeneration,
   isLastStringNotAComma,
   replaceLineBreakWithComma,
-} from "./utils";
+} from "./utils.js";
 
 const props = document.getElementById("props");
 const result = document.getElementById("result");
 
-props.addEventListener("input", function (event) {
+props.addEventListener("input", function () {
   const textAreaValue = props.value;
 
   const getPropsResult = (value) => {
@@ -15,14 +15,11 @@ props.addEventListener("input", function (event) {
 
     if (isLastStringNotAComma(string)) {
       const formattedString = string + ",";
-
       return handlePropsGeneration(formattedString);
     } else {
       return handlePropsGeneration(string);
     }
   };
 
-  result.innerHTML = getPropsResult(
-    replaceLineBreakWithComma(textAreaValue)(/\n/g, ", ")
-  );
+  result.innerHTML = getPropsResult(replaceLineBreakWithComma(textAreaValue));
 });
