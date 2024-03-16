@@ -10,8 +10,6 @@ const isClass = document.querySelector("input[name=isClass]");
 
 let isClassComponent = false;
 
-console.log("test", props.value);
-
 props.addEventListener("input", function () {
   const textAreaValue = props.value;
 
