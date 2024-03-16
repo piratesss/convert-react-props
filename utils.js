@@ -6,12 +6,17 @@ export const trimWhiteSpace = (string) => {
   return string.replace(/\s/g, "");
 };
 
-export const handlePropsGeneration = (string) => {
+export const handlePropsGeneration = (string, isClass) => {
   const stringSplitByComma = string.split(",").map((str) => str.trim());
 
   return stringSplitByComma
     .filter((str) => str.length !== 0)
-    .map((str) => `${trimWhiteSpace(str)}={${trimWhiteSpace(str)}}`)
+    .map(
+      (str) =>
+        `${trimWhiteSpace(str)}={${
+          isClass ? `this.${trimWhiteSpace(str)}` : trimWhiteSpace(str)
+        }}`
+    )
     .join("\n");
 };
 
