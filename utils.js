@@ -21,5 +21,5 @@ export const handlePropsGeneration = (string, isClass) => {
 };
 
 export const replaceLineBreakWithComma = (string) => {
-  return string.replace(/\n/g, ", ");
+  return string.replace(/\n/g, ",");
 };
