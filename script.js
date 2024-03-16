@@ -7,7 +7,10 @@ import {
 const props = document.getElementById("props");
 const result = document.getElementById("result");
 const isClass = document.querySelector("input[name=isClass]");
+
 let isClassComponent = false;
+
+console.log("test", props.value);
 
 props.addEventListener("input", function () {
   const textAreaValue = props.value;
@@ -35,3 +38,5 @@ isClass.addEventListener("change", function () {
 
   props.dispatchEvent(new Event("input"));
 });
+
+props.dispatchEvent(new Event("input"));

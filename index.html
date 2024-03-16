@@ -6,23 +6,37 @@
     <title>Convert React Props</title>
 
     <style>
+      body {
+        padding: 0 110px;
+      }
+      h1 {
+        text-align: center;
+      }
+
       .content {
         display: flex;
         justify-content: space-between;
-        gap: 40px;
+        margin-top: 40px;
+      }
+
+      .class-component-checkbox {
+        display: flex;
+        align-items: center;
       }
     </style>
   </head>
   <body>
     <h1>Convert React Props</h1>
-    <div>
+    <div class="class-component-checkbox">
       <label>Class Component</label>
       <input type="checkbox" name="isClass" />
     </div>
 
     <div class="content">
-      <textarea id="props" name="props" rows="20" cols="50"> </textarea>
-      <textarea id="result" name="result" rows="20" cols="50" disabled>
+      <textarea id="props" name="props" rows="30" cols="50">
+ react, props, made, easy</textarea
+      >
+      <textarea id="result" name="result" rows="30" cols="50" disabled>
       </textarea>
     </div>
   </body>
