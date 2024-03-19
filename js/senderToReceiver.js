@@ -1,10 +1,10 @@
-const receiverPropsField = document.getElementById("receiverPropsField");
-const senderPropsDisabled = document.getElementById("senderPropsDisabled");
+const senderPropsField = document.getElementById("senderPropsField");
+const receiverPropsDisabled = document.getElementById("receiverPropsDisabled");
 
-receiverPropsField.addEventListener("input", function () {
+senderPropsField.addEventListener("input", function () {
   const BRACKETED_EXPRESSION_REGEX = /\{([^}]+)\}/g;
 
-  const string = receiverPropsField.value;
+  const string = senderPropsField.value;
 
   const matches = [];
 
@@ -15,7 +15,7 @@ receiverPropsField.addEventListener("input", function () {
 
   const convertedValues = matches?.map((match) => match + ",").join("\n");
 
-  senderPropsDisabled.innerHTML = convertedValues;
+  receiverPropsDisabled.innerHTML = convertedValues;
 });
 
-receiverPropsField.dispatchEvent(new Event("input"));
+senderPropsField.dispatchEvent(new Event("input"));

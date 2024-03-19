@@ -15,6 +15,8 @@ copySenderProps.addEventListener("click", async () => {
 });
 
 copyReceiverProps.addEventListener("click", async () => {
-  const senderPropsDisabled = document.getElementById("senderPropsDisabled");
-  await copyTextToClipboard(senderPropsDisabled.value);
+  const receiverPropsDisabled = document.getElementById(
+    "receiverPropsDisabled"
+  );
+  await copyTextToClipboard(receiverPropsDisabled.value);
 });
