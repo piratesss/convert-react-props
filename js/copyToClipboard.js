@@ -10,8 +10,8 @@ const copySenderProps = document.getElementById("copySenderProps");
 const copyReceiverProps = document.getElementById("copyReceiverProps");
 
 copySenderProps.addEventListener("click", async () => {
-  const senderProps = document.getElementById("senderProps");
-  await copyTextToClipboard(senderProps.value);
+  const senderPropsDisabled = document.getElementById("senderPropsDisabled");
+  await copyTextToClipboard(senderPropsDisabled.value);
 });
 
 copyReceiverProps.addEventListener("click", async () => {
