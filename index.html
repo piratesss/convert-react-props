@@ -3,55 +3,80 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
     <title>Convert React Props</title>
-
-    <style>
-      body {
-        padding: 0 110px;
-      }
-      h1 {
-        text-align: center;
-      }
-
-      .content {
-        display: flex;
-        justify-content: space-between;
-        margin-top: 40px;
-      }
-
-      .class-component-checkbox {
-        display: flex;
-        align-items: center;
-      }
-
-      @media only screen and (max-width: 768px) {
-        body {
-          padding: 0 20px;
-        }
-      }
-      @media only screen and (max-width: 1050px) {
-        .content {
-          gap: 30px;
-        }
-      }
-    </style>
   </head>
   <body>
     <h1>Convert React Props</h1>
     <div class="class-component-checkbox">
-      <label>Class Component</label>
+      <label class="class-component-checkbox_label">Class Component</label>
       <input type="checkbox" name="isClass" />
     </div>
 
     <div class="content">
-      <textarea id="props" name="props" rows="30" cols="50">
+      <textarea id="receiverProps" name="receiverProps" rows="30" cols="50">
 react, props, made, easy</textarea
       >
-      <textarea id="result" name="result" rows="30" cols="50" disabled>
+      <textarea
+        id="senderProps"
+        name="senderProps"
+        rows="30"
+        cols="50"
+        disabled
+      >
       </textarea>
     </div>
-  </body>
 
-  <script src="script.js" type="module"></script>
-  <script src="./utils/index.js" type="module"></script>
+    <button
+      class="btn_copy"
+      data-message="Text copied successfully"
+      id="copySenderProps"
+    >
+      Copy Text
+    </button>
+
+    <br />
+    <br />
+    <br />
+
+    <hr />
+
+    <div class="content">
+      <textarea
+        id="receiverPropsField"
+        name="receiverPropsField"
+        rows="30"
+        cols="50"
+      >
+react={react}
+props={props}
+made={made}
+easy={easy}
+      </textarea>
+      <textarea
+        id="senderPropsDisabled"
+        name="senderPropsDisabled"
+        rows="30"
+        cols="50"
+        disabled
+      >
+      </textarea>
+    </div>
+
+    <button
+      class="btn_copy"
+      data-message="Text copied successfully"
+      id="copyReceiverProps"
+    >
+      Copy Text
+    </button>
+    <br />
+    <br />
+    <br />
+
+    <script src="/js/toast.js" type="module"></script>
+    <script src="/js/copyToClipboard.js" type="module"></script>
+    <script src="/js/receiverToSender.js" type="module"></script>
+    <script src="/js/senderToReceiver.js" type="module"></script>
+  </body>
 </html>

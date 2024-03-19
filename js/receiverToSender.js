@@ -4,14 +4,14 @@ import {
   replaceLineBreakWithComma,
 } from "./utils.js";
 
-const props = document.getElementById("props");
-const result = document.getElementById("result");
+const receiverProps = document.getElementById("receiverProps");
+const senderProps = document.getElementById("senderProps");
 const isClass = document.querySelector("input[name=isClass]");
 
 let isClassComponent = false;
 
-props.addEventListener("input", function () {
-  const textAreaValue = props.value;
+receiverProps.addEventListener("input", function () {
+  const textAreaValue = receiverProps.value;
 
   const getPropsResult = (value) => {
     const string = value;
@@ -24,7 +24,9 @@ props.addEventListener("input", function () {
     }
   };
 
-  result.innerHTML = getPropsResult(replaceLineBreakWithComma(textAreaValue));
+  senderProps.innerHTML = getPropsResult(
+    replaceLineBreakWithComma(textAreaValue)
+  );
 });
 
 isClass.addEventListener("change", function () {
@@ -34,7 +36,7 @@ isClass.addEventListener("change", function () {
     isClassComponent = false;
   }
 
-  props.dispatchEvent(new Event("input"));
+  receiverProps.dispatchEvent(new Event("input"));
 });
 
-props.dispatchEvent(new Event("input"));
+receiverProps.dispatchEvent(new Event("input"));
