@@ -4,14 +4,14 @@ import {
   replaceLineBreakWithComma,
 } from "./utils.js";
 
-const receiverProps = document.getElementById("receiverProps");
-const senderProps = document.getElementById("senderProps");
+const receiverPropsField = document.getElementById("receiverPropsField");
+const senderPropsDisabled = document.getElementById("senderPropsDisabled");
 const isClass = document.querySelector("input[name=isClass]");
 
 let isClassComponent = false;
 
-receiverProps.addEventListener("input", function () {
-  const textAreaValue = receiverProps.value;
+receiverPropsField.addEventListener("input", function () {
+  const textAreaValue = receiverPropsField.value;
 
   const getPropsResult = (value) => {
     const string = value;
@@ -24,7 +24,7 @@ receiverProps.addEventListener("input", function () {
     }
   };
 
-  senderProps.innerHTML = getPropsResult(
+  senderPropsDisabled.innerHTML = getPropsResult(
     replaceLineBreakWithComma(textAreaValue)
   );
 });
@@ -36,7 +36,7 @@ isClass.addEventListener("change", function () {
     isClassComponent = false;
   }
 
-  receiverProps.dispatchEvent(new Event("input"));
+  receiverPropsField.dispatchEvent(new Event("input"));
 });
 
-receiverProps.dispatchEvent(new Event("input"));
+receiverPropsField.dispatchEvent(new Event("input"));
