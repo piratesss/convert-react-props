@@ -17,7 +17,7 @@ h1 {
 .content {
   display: flex;
   justify-content: space-between;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 .class-component-checkbox {
@@ -63,6 +63,7 @@ h1 {
   display: grid;
   justify-items: end;
   gap: 1.5rem;
+  z-index: 99;
 }
 
 @keyframes toastIt {
@@ -76,4 +77,9 @@ h1 {
     transform: translateY(0);
     opacity: 1;
   }
+}
+
+.btn_right {
+  display: flex;
+  justify-content: flex-end;
 }
