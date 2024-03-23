@@ -2,7 +2,7 @@ const senderPropsField = document.getElementById("senderPropsField");
 const receiverPropsDisabled = document.getElementById("receiverPropsDisabled");
 
 senderPropsField.addEventListener("input", function () {
-  const BRACKETED_EXPRESSION_REGEX = /\{([^}]+)\}/g;
+  const BRACKETED_EXPRESSION_REGEX = /(\w+)\s*=\s*{[^}]*}/g;
 
   const string = senderPropsField.value;
 
