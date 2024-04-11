@@ -52,8 +52,8 @@ btn_copies.forEach((btn_copy) => {
     } else {
       generateToast({
         message: "Text copied successfully",
-        background: "#fff",
-        color: "grey",
+        background: "transparent",
+        color: "#767676",
         length: "5000ms",
         type: "SUCCESS",
       });

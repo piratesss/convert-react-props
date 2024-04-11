@@ -4,28 +4,31 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="toast.css" />
     <title>React Props Converter</title>
   </head>
   <body>
     <h1>React Prop Convertor Tool</h1>
 
     <div id="content">
-      <div class="class-component-checkbox">
-        <label class="class-component-checkbox_label">Class Component</label>
-        <input type="checkbox" name="isClass" />
+      <div class="message_and_copy_buttons">
+        <div class="class-component-checkbox">
+          <label class="class-component-checkbox_label">Class Component</label>
+          <input type="checkbox" name="isClass" />
+        </div>
+
+        <div class="btn_right">
+          <button
+            class="btn_copy"
+            data-message="Text copied successfully"
+            id="copySenderProps"
+          >
+            Copy Text
+          </button>
+        </div>
       </div>
 
-      <div class="btn_right">
-        <button
-          class="btn_copy"
-          data-message="Text copied successfully"
-          id="copySenderProps"
-        >
-          Copy Text
-        </button>
-      </div>
-
-      <div class="content">
+      <div class="content_first">
         <textarea
           id="receiverPropsField"
           name="receiverPropsField"
@@ -44,23 +47,20 @@ react, props, made, easy</textarea
         </textarea>
       </div>
 
-      <br />
-      <br />
-      <br />
+      <div class="message_and_copy_buttons">
+        <span class="sender-to-receiver-message">
+          works with both functional and class props
+        </span>
 
-      <hr />
-
-      <br />
-      <br />
-
-      <div class="btn_right">
-        <button
-          class="btn_copy"
-          data-message="Text copied successfully"
-          id="copyReceiverProps"
-        >
-          Copy Text
-        </button>
+        <div class="btn_right_second">
+          <button
+            class="btn_copy"
+            data-message="Text copied successfully"
+            id="copyReceiverProps"
+          >
+            Copy Text
+          </button>
+        </div>
       </div>
 
       <div class="content">
@@ -85,9 +85,6 @@ easy={easy}
         >
         </textarea>
       </div>
-
-      <br />
-      <br />
     </div>
 
     <script src="/js/toast.js" type="module"></script>
