@@ -34,7 +34,8 @@ h1 {
     padding: 0 20px;
   }
 }
-@media only screen and (max-width: 1050px) {
+
+@media only screen and (max-width: 1350px) {
   .content {
     gap: 30px;
   }
@@ -82,4 +83,21 @@ h1 {
 .btn_right {
   display: flex;
   justify-content: flex-end;
+}
+
+*::-webkit-scrollbar {
+  width: 3.5px;
+}
+
+*::-webkit-scrollbar:horizontal {
+  height: 6px;
+}
+
+/* Handle */
+*::-webkit-scrollbar-thumb {
+  background-color: lightgray;
+}
+
+*::-webkit-scrollbar-thumb:horizontal {
+  background-color: lightgray;
 }
