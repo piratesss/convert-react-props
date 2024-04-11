@@ -6,10 +6,20 @@ export const trimWhiteSpace = (string) => {
   return string.replace(/\s/g, "");
 };
 
+export const getSortedStrings = (array) => {
+  return array.sort((a, b) => {
+    if (a.length === b.length) {
+      return a.localeCompare(b);
+    } else {
+      return a.length - b.length;
+    }
+  });
+};
+
 export const handlePropsGeneration = (string, isClass) => {
   const stringSplitByComma = string.split(",").map((str) => str.trim());
 
-  return stringSplitByComma
+  return getSortedStrings(stringSplitByComma)
     .filter((str) => str.length !== 0)
     .map(
       (str) =>
