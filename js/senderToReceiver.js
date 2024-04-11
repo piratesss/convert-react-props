@@ -14,7 +14,10 @@ senderPropsField.addEventListener("input", function () {
   while ((match = BRACKETED_EXPRESSION_REGEX.exec(string)) !== null) {
     const extractedString = match[0].match(/{(.*?)}/)[1];
 
-    if (match[1]?.trim() === extractedString?.trim()) {
+    if (
+      match[1]?.trim() === extractedString.split(".")[1] ||
+      extractedString?.trim()
+    ) {
       matches.push(match[1]);
     }
   }

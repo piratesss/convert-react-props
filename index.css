@@ -5,19 +5,46 @@
   margin: 0;
   min-width: 0;
   font-family: Poppins;
+  background-color: #434343;
+  color: white;
 }
 
 body {
   padding: 0 110px;
 }
+
 h1 {
   text-align: center;
+  padding: 12px;
+}
+
+textarea {
+  background-color: #767676;
+  padding: 12px;
+}
+
+textarea:focus {
+  outline: none;
+}
+
+.content_first {
+  display: flex;
+  justify-content: space-between;
+  height: calc(100vh - 100px);
+  padding: 20px 0;
+}
+
+.message_and_copy_buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .content {
   display: flex;
   justify-content: space-between;
-  margin-top: 20px;
+  height: calc(100vh - 40px);
+  padding: 20px 0;
 }
 
 .class-component-checkbox {
@@ -43,41 +70,21 @@ h1 {
 
 .btn_copy {
   border: none;
-  background-color: white;
+  background-color: #767676;
   cursor: pointer;
   position: relative;
+  border-radius: 4px;
 }
 
-.toast {
-  font-size: 15.5px;
-  font-weight: 500;
-  line-height: 1;
-  animation: toastIt 3000ms cubic-bezier(0.785, 0.135, 0.15, 0.86) forwards;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-  padding: 20px;
+.btn_right_second {
+  display: flex;
+  justify-content: flex-end;
 }
 
-.toast-container {
-  position: fixed;
-  top: 1rem;
-  right: 1.5rem;
-  display: grid;
-  justify-items: end;
-  gap: 1.5rem;
-  z-index: 99;
-}
-
-@keyframes toastIt {
-  0%,
-  100% {
-    transform: translateY(-150%);
-    opacity: 0;
-  }
-  10%,
-  90% {
-    transform: translateY(0);
-    opacity: 1;
-  }
+.sender-to-receiver-message {
+  font-size: 14px;
+  font-weight: 400;
+  opacity: 0.6;
 }
 
 .btn_right {
