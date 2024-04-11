@@ -4,9 +4,9 @@ import {
   replaceLineBreakWithComma,
 } from "./utils.js";
 
+const isClass = document.querySelector("input[name=isClass]");
 const receiverPropsField = document.getElementById("receiverPropsField");
 const senderPropsDisabled = document.getElementById("senderPropsDisabled");
-const isClass = document.querySelector("input[name=isClass]");
 
 let isClassComponent = false;
 

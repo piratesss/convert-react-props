@@ -1,3 +1,5 @@
+import { getSortedStrings } from "./utils.js";
+
 const senderPropsField = document.getElementById("senderPropsField");
 const receiverPropsDisabled = document.getElementById("receiverPropsDisabled");
 
@@ -10,10 +12,16 @@ senderPropsField.addEventListener("input", function () {
 
   let match;
   while ((match = BRACKETED_EXPRESSION_REGEX.exec(string)) !== null) {
-    matches.push(match[1]);
+    const extractedString = match[0].match(/{(.*?)}/)[1];
+
+    if (match[1]?.trim() === extractedString?.trim()) {
+      matches.push(match[1]);
+    }
   }
 
-  const convertedValues = matches?.map((match) => match + ",").join("\n");
+  const convertedValues = getSortedStrings(matches)
+    ?.map((match) => match + ",")
+    .join("\n");
 
   receiverPropsDisabled.innerHTML = convertedValues;
 });
