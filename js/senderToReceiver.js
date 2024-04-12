@@ -16,7 +16,7 @@ senderPropsField.addEventListener("input", function () {
 
     if (
       match[1]?.trim() === extractedString.split(".")[1] ||
-      extractedString?.trim()
+      match[1]?.trim() === extractedString?.trim()
     ) {
       matches.push(match[1]);
     }
