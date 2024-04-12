@@ -1,7 +1,5 @@
 ### Convert React Props
 
-## Tool to convert react props
-
 ## Convert sender to receiver props and receiver to sender props
 
 <hr/>
@@ -13,7 +11,8 @@
     # Sort the props by the order of their length
     # A copy text which copies the converted props to clipboard
     # Whitespace formatting
-    # While converting sender to receiver props, validation has been done to check if the prop name and value are same
+    # While converting sender to receiver props,
+    validation has been done to check if the prop name and value are same
 
 ### Examples
 
